@@ -108,7 +108,8 @@ function OnboardingForm() {
       if (i > 0) {
         // set disabled class here depending on the index of the questions. I didn't have time to finish this, but
         // I think we can take the index, and disable everything except the current index. Once the current index
-        // changes, then we would take i + 1 and enable that next one.
+        // changes, then we would take i + 1 and enable that next one. I would then need to add a disabled property
+        // to the radio input below on line 150 and conditionally set disabled to true or false.
       }
     }
   }, [formInputStatus]);

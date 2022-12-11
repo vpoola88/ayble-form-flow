@@ -6,7 +6,7 @@ const questions = [
     question: {
       id: "onboarding-uc-1",
       question:
-        "On average, how mnay bowl movements did you have each day (during the daytime) over the past 7 days (1 week)?",
+        "On average, how many bowl movements did you have each day (during the daytime) over the past 7 days (1 week)?",
     },
     answers: [
       { id: "onboarding-uc-ans-1-03", response: "0-3 stools/day", score: 0 },
@@ -18,7 +18,7 @@ const questions = [
     question: {
       id: "onboarding-uc-2",
       question:
-        "On average, how mnay bowl movements did you have each night (during the night) over the past 7 days (1 week)?",
+        "On average, how many bowl movements did you have each night (during the night) over the past 7 days (1 week)?",
     },
     answers: [
       { id: "onboarding-uc-ans-2-0", response: "0 stools/day", score: 0 },

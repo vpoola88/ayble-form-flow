@@ -1,10 +1,17 @@
 import { useState } from "react";
 
 function OnboardingForm() {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    formQuestion: "",
+    formAnswer: "",
+    formAnswerValue: "",
+  });
+
+  const [formInputStatus, setFormInputStatus] = useState(1);
 
   function handleChange(e) {
-    console.log(e.target?.value);
+    console.log("question" + e.target?.value);
+    setFormInputStatus(2);
   }
 
   function handleSubmit(e) {
@@ -49,6 +56,45 @@ function OnboardingForm() {
               >
                 <input name="onboarding-uc-1" type="radio" value="3" />
                 <span className="px-2">10+ stools/day</span>
+              </label>
+            </div>
+          </li>
+
+          <li
+            className={`"bg-gray-50 p-8 mb-4" ${
+              formInputStatus > 1 ? "" : "opacity-60 cursor-not-allowed"
+            }`}
+          >
+            <p id="onboarding-uc-2" className="text-2xl">
+              On average, how many bowel movements did you have each night
+              (during the night) over the past 7 days (1 week)?:
+            </p>
+            <div className="flex flex-col space-y-2 text-xl pt-8">
+              <label
+                id="onboarding-uc-ans-2-0"
+                onClick={(e) => handleChange(e)}
+              >
+                <input
+                  disabled={formInputStatus > 2 ? true : false}
+                  name="onboarding-uc-2"
+                  type="radio"
+                  value="0"
+                />
+                <span className="px-2">0 stools/night</span>
+              </label>
+              <label
+                id="onboarding-uc-ans-2-13"
+                onClick={(e) => handleChange(e)}
+              >
+                <input name="onboarding-uc-2" type="radio" value="1" />
+                <span className="px-2">1-3 stools/night</span>
+              </label>
+              <label
+                id="onboarding-uc-ans-2-46"
+                onClick={(e) => handleChange(e)}
+              >
+                <input name="onboarding-uc-2" type="radio" value="2" />
+                <span className="px-2">4-6 stools/night</span>
               </label>
             </div>
           </li>

@@ -114,12 +114,12 @@ function OnboardingForm() {
     }
   }, [formInputStatus]);
 
-  function handleChange(e) {
+  function handleChange(e: any) {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: any) {
     e.preventDefault();
     // we can error handle here
 
